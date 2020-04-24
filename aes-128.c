@@ -210,13 +210,14 @@ void aes_encrypt_128(const uint8_t *roundkeys, const uint8_t *plaintext, uint8_t
 			ciphertext[i+3] = mul2(tmp[i+3] ^ tmp[i]  ) ^ tmp[i+3] ^ t;
 		}
 
-		for (i = 0; i < AES_BLOCK_SIZE; i++){
-			roundcipher[j-1][i] = ciphertext[i];
-		}
-
 		// AddRoundKey
 		for ( i = 0; i < AES_BLOCK_SIZE; ++i ) {
 			*(ciphertext+i) ^= *roundkeys++;
+		}
+		
+		// Store round ciphered text
+		for (i = 0; i < AES_BLOCK_SIZE; i++){
+			roundcipher[j-1][i] = ciphertext[i];
 		}
 
 	}

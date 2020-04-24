@@ -1,0 +1,80 @@
+    < Result of AES-128 Encryption Avalanche Property test > 
+
+
+ [a]------------------------------------------------------------------------------------------------------------
+
+  (i)
+      PT    = ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+
+     KEY    = ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+
+      CT    = bc bf 21 7c b2 80 cf 30 b2 51 70 52 19 3a b9 79 
+
+  Decrypted = ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+
+
+  (ii)
+  Hamming distance when 33th bit is changed
+
+  PT:   1   ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff     ff ff ff ff 7f ff ff ff ff ff ff ff ff ff ff ff 
+
+  R1:  19   8b 8a 8a 8a 74 75 75 75 8b 8a 8a 8a 74 75 75 75     8b 8a 8a 8a 33 db db 9c 8b 8a 8a 8a 74 75 75 75 
+
+  R2:  48   88 ad 4e 9c e4 14 f7 bd 77 52 b1 63 1b eb 08 42     e4 e5 6a b8 46 45 a6 4e 34 11 74 e5 3f 87 40 66 
+
+  R3:  57   6b 4a e3 4a 8f 51 ea 54 65 d0 07 a8 d6 7d 70 94     c8 25 4f 56 ff 84 e4 c5 c5 f8 b1 fd c3 c9 18 a5 
+
+  R4:  68   90 da e4 ef a3 6a e7 45 02 80 1c a1 c4 8a 08 79     05 79 8b 86 a1 15 f9 e9 ba 0d 75 27 37 24 5f 3a 
+
+  R5:  60   09 d7 73 87 00 62 09 ce 6f 03 51 02 74 e1 76 65     c5 5f 7b ac 3a ef 78 4e 8e 9c a2 60 a8 57 12 ff 
+
+  R6:  64   0a bb b8 51 a2 7c f8 f3 9e a9 42 f2 8a d7 ce c1     70 8b 4a 8b fc 40 d6 8e 13 08 e0 64 68 65 cc 18 
+
+  R7:  68   43 46 87 e8 6f 6b 05 19 88 fe d2 b8 2d 86 47 70     1c db 4d d7 72 8b d8 7c 0f cf b4 f3 44 00 9b d2 
+
+  R8:  63   c7 42 94 20 1f 2d 04 05 c8 79 2b ba 2a 18 d3 c7     ca ec 17 18 a6 f5 0a 92 ee 46 1a 37 e2 79 44 b2 
+
+  R9:  61   58 53 89 cc b9 d2 bd 0d 08 04 9b 84 ad 41 25 ba     c7 99 ab 95 22 68 61 9f 48 bb 93 5e 91 29 39 96 
+
+  CT:  50   bc bf 21 7c b2 80 cf 30 b2 51 70 52 19 3a b9 79     10 4f e9 18 77 98 e2 51 d0 77 b5 5e 0d 39 2c 7e 
+
+
+ [b]------------------------------------------------------------------------------------------------------------
+
+  (i)
+      PT    = c6 20 f4 54 d6 a7 92 7f d6 9e 93 14 0a 36 a3 ac 
+
+     KEY    = 75 c4 75 c4 75 c4 75 c4 75 c4 75 c4 75 c4 75 c4 
+
+      CT    = 08 c2 ae a9 2e 19 0c 2b f1 ef 06 3e dd c4 b5 67 
+
+  Decrypted = c6 20 f4 54 d6 a7 92 7f d6 9e 93 14 0a 36 a3 ac 
+
+
+  (ii)
+  Hamming distance when 69th bit is changed
+
+  PT:   1   c6 20 f4 54 d6 a7 92 7f d6 9e 93 14 0a 36 a3 ac     c6 20 f4 54 d6 a7 92 7f de 9e 93 14 0a 36 a3 ac 
+
+  R1:  13   6f 15 37 11 46 91 ff 0b 1a a4 d7 0d fd 4a 04 ed     6f 15 37 11 46 91 ff 0b ca cc bf b5 fd 4a 04 ed 
+
+  R2:  37   bc 33 fd 3b 36 1f 5a 2a ce 8a 64 de de 97 1d a2     ba 39 f1 3d 30 1b 58 28 79 5c b2 bf dc 95 1b a6 
+
+  R3:  62   06 9c 13 ef 09 29 40 dd b9 5d 88 65 1d 1c d7 2a     e4 51 27 60 99 98 37 70 1a ea 8e cc 99 4c 11 b3 
+
+  R4:  65   87 2a c5 e1 4c 37 d6 d3 62 94 82 5b 79 aa 1c 29     e0 05 02 de 4c d5 e0 a0 74 49 11 63 69 56 6e 67 
+
+  R5:  66   a7 04 2b f1 91 e5 b2 09 6c 16 98 dd 97 c8 2f cd     51 53 1d b8 5c 37 99 c2 6c fa 95 4e 55 7b 9d 1a 
+
+  R6:  74   11 94 9d a5 87 48 d5 0b 9c 23 e0 8d 04 c9 2e d4     a6 34 aa 38 32 47 ae ed ad 71 ef 59 fa 1d c5 49 
+
+  R7:  62   d5 ea b2 be 05 6b fb ba 37 62 c2 52 aa 1c 53 63     c2 82 0f 65 6f ed 7c f6 a6 a8 8d f8 30 13 c2 f3 
+
+  R8:  65   c5 7f a5 8e 9a d5 ce 19 20 b3 48 b7 c0 fd 70 c8     79 73 58 41 94 66 d0 3a 88 a1 54 b9 72 06 b1 22 
+
+  R9:  60   93 c6 de 25 05 83 87 37 b9 6d 74 93 dc d3 3c da     ea 5b 97 a1 c8 8d de 6b 2a 88 18 f9 d0 7a 6c 8c 
+
+  CT:  70   08 c2 ae a9 2e 19 0c 2b f1 ef 06 3e dd c4 b5 67     53 73 91 9a ad e1 b7 26 42 53 93 db 2b 49 bf 22 
+
+
+  < End of Result >
