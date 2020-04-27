@@ -20,6 +20,8 @@
  *	Open source code from
  *	<openluopworld>
  *	-"https://github.com/openluopworld/aes_128"
+ *	
+ * 	- License attached -
  */
 
 
@@ -179,7 +181,7 @@ void test(FILE *fp, int flag, int flag2){
 	int j;
 	int distance = hamming(plaintext, plaintext2);
 	fprintf(fp, "  Hamming distance when %dth bit is changed\n\n", shift_index+1);
-	fprintf(fp, "  PT: %3d   ", distance);
+	fprintf(fp, "  PT:  %03d   ", distance);
 	for (j = 0; j < AES_BLOCK_SIZE; j++){
 		fprintf(fp, "%02x ", plaintext[j]);
 	}
@@ -191,7 +193,7 @@ void test(FILE *fp, int flag, int flag2){
 
 	for (i = 0; i < 9 ; i++){
 		distance = hamming(roundcipher1[i], roundcipher2[i]);
-		fprintf(fp, "  R%d: %3d   ", i+1, distance);
+		fprintf(fp, "  R%d:  %03d   ", i+1, distance);
 		for (j = 0; j < AES_BLOCK_SIZE; j++){
 			fprintf(fp, "%02x ", roundcipher1[i][j]);
 		}
@@ -203,7 +205,7 @@ void test(FILE *fp, int flag, int flag2){
 	}
 
 	distance = hamming(ciphertext, ciphertext2);
-	fprintf(fp, "  CT: %3d   ", distance);
+	fprintf(fp, "  CT:  %03d   ", distance);
 	for (j = 0; j < AES_BLOCK_SIZE; j++){
 		fprintf(fp, "%02x ", ciphertext[j]);
 	}
