@@ -83,7 +83,7 @@ void test(FILE *fp, int flag, int flag2){
 			plaintext2[2*i] = plaintext[2*i];
 			plaintext2[2*i+1] = plaintext[2*i+1];
 
-			srand((unsigned int)(time(NULL)+41));
+			srand((unsigned int)(time(NULL)+i+41));
 			rv = rand();
 			key[2*i] = (rv >> 8) & 0xFF;
 			key[2*i+1] = rv & 0xFF;

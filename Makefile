@@ -6,6 +6,7 @@ aes: aes-128.c aes-128.h main.c
 
 output.txt: 
 	@./aes
+	@rm -f *.o aes
 
 clean:
 	@rm -f *.o aes output.txt
